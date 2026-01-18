@@ -1,29 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Scandi TV Player Developer</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scandi TV Player Developer | Premium Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Variabler for enkelt fargetema --- */
+        :root {
+            --bg-main: #0f172a;       /* Veldig mørk blågrå bakgrunn */
+            --bg-card: #1e293b;       /* Litt lysere kort-bakgrunn */
+            --text-primary: #f8fafc;  /* Nesten hvit tekst */
+            --text-secondary: #94a3b8;/* Lys grå sekundærtekst */
+            --accent-color: #38bdf8;  /* Elektrisk blå aksentfarge */
+        }
+
+        /* --- Grunnleggende Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 4rem;
+        }
+
+        /* --- Layout --- */
+        .container {
+            width: 90%;
+            max-width: 800px; /* Holder innholdet samlet på store skjermer */
+            margin: 0 auto;
+        }
+
+        /* --- Header / Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 6rem 1rem 4rem;
+            background: radial-gradient(circle at top, #1e293b 0%, var(--bg-main) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.05rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--text-primary), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Seksjoner og Kort --- */
+        .content-section {
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+        }
+
+        article {
+            margin-bottom: 2.5rem;
+        }
+
+        article:last-child {
+            margin-bottom: 0;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* --- Kontakt Link --- */
+        .contact-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-main);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* --- Mobil Tilpasning --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-    </header>
-    <section id="about-section">
-        <article>
-            <h2>Who am I?</h2>
-            <p>I am a software developer and the creator of <strong>Scandi TV Player</strong>, an app designed for Samsung Smart TVs. This app serves as a player interface for users to access their own legally obtained TV content.</p>
-        </article>
-        <article>
-            <h2>My Background</h2>
-            <p>I have experience in software development and TV app development. Over the years, I have worked on various technology projects and developed a passion for creating apps that are user-friendly and reliable.</p>
-        </article>
-    </section>
 
-    <header>
-        <h1>Contact</h1>
+    <header class="hero">
+        <div class="container">
+            <h1>Scandi TV Player Developer</h1>
+            <p>Creating reliable, user-friendly interfaces for the modern living room.</p>
+        </div>
     </header>
-    <section id="contact-section">
-        <p>If you have questions about Scandi TV Player, you can reach me at <a href="mailto:scanditvplayer@gmail.com">scanditvplayer@gmail.com</a>.</p>
-    </section>
+
+    <main class="container content-section">
+        
+        <section class="card" id="about-section">
+            <h2>About The Developer</h2>
+            <article>
+                <h3>Who am I?</h3>
+                <p>I am a software developer and the creator of <strong>Scandi TV Player</strong>, an app specifically designed for Samsung Smart TVs. [cite_start]This app serves as a player interface for users to access their own legally obtained TV content[cite: 2].</p>
+            </article>
+            <article>
+                <h3>My Background</h3>
+                <p>I have extensive experience in software development with a focus on TV app development. [cite_start]Over the years, I have worked on various technology projects and developed a passion for creating apps that are user-friendly and reliable[cite: 3].</p>
+            </article>
+        </section>
+
+        <section class="card" id="contact-section">
+            <h2>Get In Touch</h2>
+            <p>Do you have questions about Scandi TV Player, partnership opportunities, or feedback? I'd love to hear from you.</p>
+            <a href="mailto:scanditvplayer@gmail.com" class="contact-link">scanditvplayer@gmail.com</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Scandi TV Player Development. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
